@@ -1,0 +1,46 @@
+# Airbnb NYC Price Predictor
+Problem Statement
+New York City hosts thousands of active Airbnb listings, and new hosts often
+struggle to price their listing competitively — set it too high and it never
+books, too low and money is left on the table. This project builds a machine
+learning model that predicts a fair nightly price for an NYC Airbnb listing
+based on its location, room type, and booking characteristics, then deploys
+it as a live web app anyone can use.
+Approach
+1. Data: Public NYC Airbnb listings dataset (neighbourhood group, room
+   type, minimum nights, number of reviews, reviews per month, host listing
+   count, availability, etc.)
+2. Cleaning: Handled missing values (e.g. `reviews_per_month`), removed
+   outliers/invalid price entries, and dropped irrelevant identifier columns.
+3. EDA: Explored price distribution by borough and room type, correlation
+   between review activity and price, and availability patterns.
+4. Feature Engineering: One-hot encoded categorical features
+   (`neighbourhood_group`, `room_type`), engineered `days_since_review` and
+   `popularity_score`, and scaled numeric features with `StandardScaler`.
+5. Modeling: Trained and compared multiple regression models (Linear
+   Regression, Random Forest, Gradient Boosting). Selected
+   Gradient Boosting Regressor as the final model based on validation
+   performance.
+6. Evaluation: Compared models using RMSE / MAE / R² on a held-out test
+   set.
+7. Deployment: Final model + scaler serialized with `pickle` and served
+   through a **Streamlit** app for live, interactive predictions.
+
+## Results
+Final model: `GradientBoostingRegressor`
+The model takes neighbourhood, room type, and booking details as input and
+returns a predicted nightly price in real time.
+
+## How to Run
+### Option 1: Live app
+[Add your deployed Streamlit app link here]
+
+
+## Project Structure
+
+├── app.py                  # Streamlit web app
+├── model.pkl                # Trained Gradient Boosting model
+├── scaler.pkl                # Fitted StandardScaler
+├── requirements.txt          # Python dependencies
+├── Capstone_Project.ipynb    # Full workflow: EDA, feature engineering, training, evaluation
+└── README.md
