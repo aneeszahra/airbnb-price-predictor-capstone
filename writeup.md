@@ -1,6 +1,6 @@
 # Case Study: Airbnb NYC Price Predictor
 
-*he problem. Pricing a short-term rental is one of the biggest pain
+The problem. Pricing a short-term rental is one of the biggest pain
 points for new Airbnb hosts. Price too high and a listing sits empty; price
 too low and a host loses income every single night. Airbnb's own pricing
 suggestions are often generic and don't account for the nuances of a
