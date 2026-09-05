@@ -26,21 +26,21 @@ Approach
 7. Deployment: Final model + scaler serialized with `pickle` and served
    through a **Streamlit** app for live, interactive predictions.
 
-## Results
+# Results
 Final model: `GradientBoostingRegressor`
 The model takes neighbourhood, room type, and booking details as input and
 returns a predicted nightly price in real time.
 
-## How to Run
-### Option 1: Live app
-[Add your deployed Streamlit app link here]
+# How to Run
+ Live app
+[https://airbnb-price-predictor-capstone-nf2qoqdy5g6fba63kj437b.streamlit.app/]
 
 
-## Project Structure
+# Project Structure
 
-├── app.py                  # Streamlit web app
-├── model.pkl                # Trained Gradient Boosting model
-├── scaler.pkl                # Fitted StandardScaler
-├── requirements.txt          # Python dependencies
-├── Capstone_Project.ipynb    # Full workflow: EDA, feature engineering, training, evaluation
-└── README.md
+ app.py                  # Streamlit web app
+ model.pkl                # Trained Gradient Boosting model
+ scaler.pkl                # Fitted StandardScaler
+ requirements.txt          # Python dependencies
+ Capstone_Project.ipynb    # Full workflow: EDA, feature engineering, training, evaluation
+ README.md
